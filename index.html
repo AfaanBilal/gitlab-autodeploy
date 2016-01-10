@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>GitLab AutoDeploy by AfaanBilal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">GitLab AutoDeploy</h1>
+      <h2 class="project-tagline">GitLab AutoDeploy is a PHP script to easily deploy web app repositories on git push.</h2>
+      <a href="https://github.com/AfaanBilal/gitlab-autodeploy" class="btn">View on GitHub</a>
+      <a href="https://github.com/AfaanBilal/gitlab-autodeploy/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/AfaanBilal/gitlab-autodeploy/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="gitlab-autodeploy" class="anchor" href="#gitlab-autodeploy" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitLab AutoDeploy</h1>
+
+<p>Author: <strong>Afaan Bilal (<a href="https://github.com/AfaanBilal">@AfaanBilal</a>)</strong><br>
+Author URL: <strong><a href="https://google.com/+AfaanBilal" title="Afaan Bilal">Google+</a></strong></p>
+
+<h5>
+<a id="project-page-afaanmlgitlab-autodeploy" class="anchor" href="#project-page-afaanmlgitlab-autodeploy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Page: <a href="https://afaan.ml/gitlab-autodeploy">afaan.ml/gitlab-autodeploy</a>
+</h5>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p><strong>GitLab AutoDeploy</strong> is a PHP script to easily deploy web app repositories on <code>git push</code> or 
+any other hook. It is based on a <a href="https://github.com/AfaanBilal/github-autodeploy">similar script</a> <a href="https://google.com/+AfaanBilal" title="Afaan Bilal">I</a> wrote for GitHub.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>No SSH access required.</li>
+<li>No shell access required.</li>
+<li>Fully compatible with shared servers.</li>
+<li>Both public, internal and private repos are supported.</li>
+</ul>
+
+<h2>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h2>
+
+<ol>
+<li>Download <a href="gitlab-autodeploy.php">gitlab-autodeploy.php</a>.</li>
+<li>Update the GitLab repo ID and your private token by replacing <code>[REPO_ID]</code> and <code>[PRIVATE_TOKEN]</code>.</li>
+<li>Set the deploy directory by replacing <code>[DEPLOY_DIR]</code> relative to the script.</li>
+<li>Set your timezone.</li>
+<li>Upload the script to your server.</li>
+<li>On GitLab, <a href="#adding-a-webhook" title="Adding a WebHook">add a WebHook</a> to your repo for a <code>push</code> event (or any other) and
+set it to the uploaded script.</li>
+<li>You're done!</li>
+</ol>
+
+<p>Now, whenever you <code>git push</code> to your gitlab repo, it will be automatically deployed
+to your web server!</p>
+
+<h2>
+<a id="adding-a-webhook" class="anchor" href="#adding-a-webhook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding a WebHook</h2>
+
+<p><em>You must have administrative access to the repo for adding WebHooks</em></p>
+
+<ol>
+<li>Go to your GitLab repo » <code>Settings</code> » <code>Web Hooks</code>.<br>
+</li>
+<li>Enter the URL of the gitlab-autodeploy.php script in the <code>URL</code> field.<br>
+</li>
+<li>If your server does not use SSL, then uncheck <code>Enable SSL Verification</code>.<br>
+</li>
+<li>Leave everything else as is, click <code>Add Web Hook</code>.<br>
+</li>
+<li>You're done!<br>
+</li>
+</ol>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>All contributions are welcome. Please create an issue first for any feature request
+or bug. Then fork the repository, create a branch and make any changes to fix the bug 
+or add the feature and create a pull request. That's it!
+Thanks!</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><strong>GitLab AutoDeploy</strong> is released under the MIT License.
+Check out the full license <a href="LICENSE">here</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/AfaanBilal/gitlab-autodeploy">GitLab AutoDeploy</a> is maintained by <a href="https://github.com/AfaanBilal">AfaanBilal</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

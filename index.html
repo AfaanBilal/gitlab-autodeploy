@@ -53,7 +53,7 @@ any other hook. It is based on a <a href="https://github.com/AfaanBilal/github-a
 
 <ol>
 <li>Download gitlab-autodeploy.php.</li>
-<li>Update the GitLab repo ID and your private token by replacing <code>[REPO_ID]</code> and <code>[PRIVATE_TOKEN]</code>.</li>
+<li>Update the <code>[PRIVATE_TOKEN]</code> and <code>[REPO_ID]</code> with your GitLab <a href="#getting-private-token-and-project-id">Private token and Project ID</a>.</li>
 <li>Set the deploy directory by replacing <code>[DEPLOY_DIR]</code> relative to the script.</li>
 <li>Set your timezone.</li>
 <li>Upload the script to your server.</li>
@@ -66,12 +66,21 @@ set it to the uploaded script.</li>
 to your web server!</p>
 
 <h2>
+<a id="getting-private-token-and-project-id" class="anchor" href="#getting-private-token-and-project-id" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting your <code>Private Token</code> and <code>Project ID</code></h2>
+
+<ol>
+    <li>Your private token can be found in your GitLab profile in <code>Profile Settings</code> &raquo; <code>Account</code>.</li>
+    <li>For your project ID, go to <a href="https://gitlab.com/api/v3/projects/?private_token=PRIVATE-TOKEN">https://gitlab.com/api/v3/projects/?private_token=PRIVATE-TOKEN</a> (Replace PRIVATE-TOKEN with your private token)</li>
+    <li>Find your project in the returned JSON and copy the ID associated with it.</li>
+</ol>
+
+<h2>
 <a id="adding-a-webhook" class="anchor" href="#adding-a-webhook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding a WebHook</h2>
 
 <p><em>You must have administrative access to the repo for adding WebHooks</em></p>
 
 <ol>
-<li>Go to your GitLab repo » <code>Settings</code> » <code>Web Hooks</code>.<br>
+<li>Go to your GitLab repo &raquo; <code>Settings</code> &raquo; <code>Web Hooks</code>.<br>
 </li>
 <li>Enter the URL of the gitlab-autodeploy.php script in the <code>URL</code> field.<br>
 </li>

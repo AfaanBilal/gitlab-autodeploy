@@ -129,7 +129,14 @@ function recursiveMoveDirectory($src, $dest)
 
 echo "Deploying...<br>";
 
-$RepositoryWebURL = explode('/', json_decode( file_get_contents("https://gitlab.com/api/v3/projects/".REPO_ID."?private_token=".PRIVATE_TOKEN), true )['web_url']);
+$ProjectData = json_decode( file_get_contents("https://gitlab.com/api/v3/projects/".REPO_ID."?private_token=".PRIVATE_TOKEN), true );
+if ( in_array("message", array_keys($ProjectData)) )
+{
+    writeLog("Error: ".$ProjectData['message']);
+    exit;
+}
+
+$RepositoryWebURL = explode('/', $ProjectData['web_url']);
 $RepositoryName   = $RepositoryWebURL[ count( $RepositoryWebURL ) - 1 ];
 
 $zipRepo  = "https://gitlab.com/api/v3/projects/".REPO_ID."/repository/archive.zip?private_token=".PRIVATE_TOKEN; 

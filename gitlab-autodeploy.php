@@ -69,10 +69,9 @@ function ExtractZip($zipFile, $extractTo)
         return FALSE;
 }
 
-
 function recursiveRemoveDirectory($directory)
 {
-    foreach(glob("{$directory}/*") as $file)
+    foreach(glob("{$directory}/{,.}*", GLOB_BRACE) as $file)
     {
         if(is_dir($file))
             recursiveRemoveDirectory($file);
@@ -176,6 +175,7 @@ echo $logStr;
 
 // Clean up
 unlink ($zipLocal);
+chmod($tempDir, 0777);
 recursiveRemoveDirectory($tempDir);
 
 ?>

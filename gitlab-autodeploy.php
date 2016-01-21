@@ -31,6 +31,7 @@ define('LOGFILE', 'gitlab-autodeploy.log');
 // TimeZone (for LOG)
 date_default_timezone_set("Asia/Kolkata");
 
+// Logging
 function writeLog($data)
 {
     if (LOGFILE == FALSE)
@@ -55,6 +56,7 @@ function writeLog($data)
     fclose($fh);
 }
 
+// Zip Extraction
 function ExtractZip($zipFile, $extractTo)
 {    
     $zip = new ZipArchive;
@@ -69,6 +71,7 @@ function ExtractZip($zipFile, $extractTo)
         return FALSE;
 }
 
+// Remove directories, sub-directories and files (including dot files)
 function recursiveRemoveDirectory($directory)
 {
     foreach(glob("{$directory}/{,.}*", GLOB_BRACE) as $file)
@@ -82,6 +85,7 @@ function recursiveRemoveDirectory($directory)
     rmdir($directory);
 }
 
+// recursive copy
 function copyr($source, $dest) 
 { 
     // Simple copy for a file 

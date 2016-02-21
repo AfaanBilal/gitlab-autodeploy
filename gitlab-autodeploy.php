@@ -10,7 +10,7 @@
  *  
  *  - No Shell Access Required
  *  - Best for Shared Hosting Platforms
- *  - Both public, internal and private repositories.   
+ *  - Public, internal and private repositories supported
  * 
  *  (c) 2016 Afaan Bilal
  *

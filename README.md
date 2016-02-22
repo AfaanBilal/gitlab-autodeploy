@@ -14,7 +14,7 @@ any other hook. It is based on a [similar script][2] [I][1] wrote for GitHub.
 - No SSH access required.
 - No shell access required.
 - Fully compatible with shared servers.
-- Both public, internal and private repos are supported.
+- Public, internal and private repos are supported.
 
 ## Setup
 1. Download [gitlab-autodeploy.php](gitlab-autodeploy.php).

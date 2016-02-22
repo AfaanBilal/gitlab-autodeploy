@@ -78,7 +78,7 @@ function recursiveRemoveDirectory($dir)
 
     foreach ($files as $file) 
 	{ 
-      (is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file"); 
+      (is_dir("$dir/$file")) ? recursiveRemoveDirectory("$dir/$file") : unlink("$dir/$file"); 
     }
 	
     return rmdir($dir);

@@ -176,6 +176,9 @@ else
 writeLog($logStr);
 echo $logStr;
 
+// Prevent cPanel SoftException
+chmod(DEPLOY_DIR, 0755);
+
 // Clean up
 unlink ($zipLocal);
 chmod($tempDir, 0777);

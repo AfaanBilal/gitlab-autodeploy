@@ -72,17 +72,16 @@ function ExtractZip($zipFile, $extractTo)
 }
 
 // Remove directories, sub-directories and files (including dot files)
-function recursiveRemoveDirectory($directory)
+function recursiveRemoveDirectory($dir)
 {
-    foreach(glob("{$directory}/{,.}*", GLOB_BRACE) as $file)
-    {
-        if(is_dir($file))
-            recursiveRemoveDirectory($file);
-        else
-            unlink($file);
+    $files = array_diff(scandir($dir), array('.','..')); 
+
+    foreach ($files as $file) 
+	{ 
+      (is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file"); 
     }
-    
-    rmdir($directory);
+	
+    return rmdir($dir);
 }
 
 // recursive copy

@@ -1,6 +1,8 @@
 GitLab AutoDeploy
 ==============
 
+## A new and completely rewritten version is available at [GitLab AutoDeploy V2](https://github.com/AfaanBilal/gitlab-autodeploy-v2)
+
 Author: **Afaan Bilal ([@AfaanBilal](https://github.com/AfaanBilal))**   
 Author URL: **[Google+][1]**
 

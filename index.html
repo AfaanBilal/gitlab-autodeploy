@@ -14,11 +14,11 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">GitLab AutoDeploy</h1>
-      <h2 class="project-tagline">GitLab AutoDeploy is a PHP script to easily deploy web app repositories on git push.</h2>
-      <a href="https://github.com/AfaanBilal/gitlab-autodeploy" class="btn">View on GitHub</a>
-      <a href="https://github.com/AfaanBilal/gitlab-autodeploy/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/AfaanBilal/gitlab-autodeploy/tarball/master" class="btn">Download .tar.gz</a>
+      <h1 class="project-name">GitLab AutoDeploy V2</h1>
+      <h2 class="project-tagline">GitLab AutoDeploy V2 is a PHP script to easily deploy web app repositories on git push.</h2>
+      <a href="https://github.com/AfaanBilal/gitlab-autodeploy-v2" class="btn">View on GitHub</a>
+      <a href="https://github.com/AfaanBilal/gitlab-autodeploy-v2/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/AfaanBilal/gitlab-autodeploy-v2/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
@@ -35,8 +35,12 @@ Author URL: <strong><a href="https://google.com/+AfaanBilal" title="Afaan Bilal"
 <h2>
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
 
-<p><strong>GitLab AutoDeploy</strong> is a PHP script to easily deploy web app repositories on <code>git push</code> or 
-any other hook. It is based on a <a href="https://github.com/AfaanBilal/github-autodeploy">similar script</a> <a href="https://google.com/+AfaanBilal" title="Afaan Bilal">I</a> wrote for GitHub.</p>
+<p>
+  <strong>GitLab AutoDeploy</strong> is a PHP script to easily deploy web app repositories on <code>git push</code> or 
+  any other hook. It is based on a <a href="https://github.com/AfaanBilal/github-autodeploy">similar script</a> <a href="https://google.com/+AfaanBilal" title="Afaan Bilal">I</a> wrote for GitHub.
+  The <strong>v2</strong> is a complete rewrite of the <a href="https://github.com/AfaanBilal/gitlab-autodeploy">original</a> with the major change being that only changes are deployed instead of a complete 
+  redeployment. So you need to manually deploy at least once and then let it work its magic.
+</p>
 
 <h2>
 <a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
@@ -52,7 +56,7 @@ any other hook. It is based on a <a href="https://github.com/AfaanBilal/github-a
 <a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h2>
 
 <ol>
-<li>Download gitlab-autodeploy.php.</li>
+<li>Download gitlab-autodeploy-v2.php.</li>
 <li>Update the <code>[PRIVATE_TOKEN]</code> and <code>[REPO_ID]</code> with your GitLab <a href="#getting-private-token-and-project-id">Private token and Project ID</a>.</li>
 <li>Set the deploy directory by replacing <code>[DEPLOY_DIR]</code> relative to the script.</li>
 <li>Set your timezone.</li>
